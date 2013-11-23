@@ -1,0 +1,37 @@
+{
+  "name": "ak-template",
+  "version": "0.0.1",
+  "description": "micro template engine",
+  "keywords": [
+    "micro",
+    "template",
+    "engine"
+  ],
+  "license": "MIT",
+  "author": "Avétis KAZARIAN",
+  "contributors": "Avétis KAZARIAN",
+  "homepage": "https://github.com/avetisk/ak-template",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/avetisk/ak-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/avetisk/ak-template/issues"
+  },
+  "readmeFilename": "README.md",
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": "~0.10.22"
+  },
+  "dependencies": {
+    "stluafed": "0.0.4"
+  },
+  "devDependencies": {
+    "browserify": "~2.35.4",
+    "karma": "~0.10.4",
+    "karma-mocha": "~0.1.0",
+    "karma-safari-launcher": "~0.1.1"
+  }
+}
