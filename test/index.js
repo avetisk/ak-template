@@ -26,6 +26,18 @@ describe('template', function () {
     done();
   });
 
+  it('should render without variable', function (done) {
+    var tpl = template('<div>Empty.</div>');
+
+    assert(tpl instanceof Function);
+
+    var html = tpl();
+
+    assert.equal(html, '<div>Empty.</div>');
+
+    done();
+  });
+
   it('should render script', function (done) {
     var tpl = template(
       /*jshint quotmark: false*/
