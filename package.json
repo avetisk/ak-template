@@ -26,12 +26,16 @@
     "node": "~0.10.22"
   },
   "dependencies": {
-    "stluafed": "0.0.4"
+    "stluafed": "~0.0.4"
   },
   "devDependencies": {
-    "browserify": "~2.35.4",
-    "karma": "~0.10.4",
-    "karma-mocha": "~0.1.0",
-    "karma-safari-launcher": "~0.1.1"
+    "browserify": "~3.12.0",
+    "karma": "~0.11.9",
+    "karma-mocha": "~0.1.1",
+    "karma-safari-launcher": "~0.1.1",
+    "karma-firefox-launcher": "~0.1.2",
+    "envify": "~1.0.1",
+    "karma-coverage": "~0.1.4",
+    "istanbul": "~0.2.1"
   }
 }

@@ -41,16 +41,14 @@ describe('template', function () {
   it('should render script', function (done) {
     var tpl = template(
       /*jshint quotmark: false*/
-      '<div><% for (var i = 0; i < locals.len; i += 1) { %>' + "\n" +
-      '  <span><%= i %></span>' + "\n" +
-      '<% } %></div>'
+      '<div><% for (var i = 0; i < locals.len; i += 1) { %>\n<span><%= i %></span><% } %></div>'
     );
 
     assert(tpl instanceof Function);
 
     var html = tpl({'len': 5});
 
-    assert.equal(html, '<div>   <span>0</span>    <span>1</span>    <span>2</span>    <span>3</span>    <span>4</span> </div>');
+    assert.equal(html, '<div> <span>0</span> <span>1</span> <span>2</span> <span>3</span> <span>4</span></div>');
 
     done();
   });
