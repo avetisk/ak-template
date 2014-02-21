@@ -9,7 +9,7 @@ clean:
 	@rm -fr ./lib-cov
 
 buildtest:
-	@./node_modules/.bin/browserify -d ./test/index.js --ignore-missing > ./test/build.js
+	@./node_modules/.bin/browserify -d ./test/index.js > ./test/build.js
 
 validate:
 	@jshint --config .jshintrc $(JS)
@@ -17,9 +17,9 @@ validate:
 coverage:
 	@rm -fr ./lib-cov
 	@./node_modules/.bin/istanbul instrument -o ./lib-cov ./lib
-	@TEST_COVERAGE=1 ./node_modules/.bin/browserify -d ./test/index.js -t envify --ignore-missing > ./test/build.js
-	@./node_modules/karma/bin/karma start karma-coverage.conf.js --browsers Chrome
-	@./node_modules/karma/bin/karma start karma-coverage.conf.js --browsers Firefox
-	@./node_modules/karma/bin/karma start karma-coverage.conf.js --browsers Safari
+	@AK_TEMPLATE_TEST_COVERAGE=1 ./node_modules/.bin/browserify -d ./test/index.js -t envify > ./test/build.js
+	@AK_TEMPLATE_TEST_COVERAGE=1 ./node_modules/karma/bin/karma start karma-coverage.conf.js --browsers Chrome
+	@AK_TEMPLATE_TEST_COVERAGE=1 ./node_modules/karma/bin/karma start karma-coverage.conf.js --browsers Firefox
+	@AK_TEMPLATE_TEST_COVERAGE=1 ./node_modules/karma/bin/karma start karma-coverage.conf.js --browsers Safari
 
 .PHONY: clean buildtest test validate coverage

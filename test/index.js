@@ -2,7 +2,7 @@
 
 'use strict';
 
-var template = require('../');
+var template = process.env.AK_TEMPLATE_TEST_COVERAGE ? require('../lib-cov/template') : require('../');
 var assert = require('assert');
 
 describe('template', function () {

@@ -23,6 +23,5 @@
   "sub": true,
   "boss": true,
 
-  "node": true,
-  "browser": true
+  "node": true
 }
