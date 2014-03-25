@@ -70,12 +70,15 @@ describe('template', function () {
   });
 
   it('should escape <%- variable %>', function (done) {
-    var tpl = template('<div><%- locals.hari %></div>');
+    var tpl = template('<div><%- locals.hari %><%- locals.number %></div>');
     var inject = '<script>alert("\'&")</script>';
 
-    var html = tpl({'hari': inject});
+    var html = tpl({
+      'hari': inject,
+      'number': 123
+    });
 
-    assert.equal(html, '<div>&lt;script&gtalert(&quot;&#39&amp;&quot;)&lt;/script&gt</div>');
+    assert.equal(html, '<div>&lt;script&gtalert(&quot;&#39&amp;&quot;)&lt;/script&gt123</div>');
 
     done();
   });
