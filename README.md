@@ -29,7 +29,7 @@ Using [John Resig's micro-template format](http://ejohn.org/blog/javascript-micr
 
 You can pass an `Object` as a parameter, it will be accessible within the template through the variable `locals`.
 
-See exemple for more details.
+See example for more details.
 
 ## `template.globals` *Object*
 
