@@ -78,7 +78,7 @@ describe('template', function () {
       'number': 123
     });
 
-    assert.equal(html, '<div>&lt;script&gtalert(&quot;&#39&amp;&quot;)&lt;/script&gt123</div>');
+    assert.equal(html, '<div>&lt;script&gtalert(&quot;&#39;&amp;&quot;)&lt;/script&gt123</div>');
 
     done();
   });
