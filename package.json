@@ -22,9 +22,6 @@
   "scripts": {
     "test": "make test"
   },
-  "engines": {
-    "node": ">=0.10.22"
-  },
   "dependencies": {
     "stluafed": "~0.0.4"
   },
